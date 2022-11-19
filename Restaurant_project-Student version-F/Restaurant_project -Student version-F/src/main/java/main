@@ -1,0 +1,60 @@
+import java.time.LocalTime;
+import java.time.LocalDate;
+import java.util.ArrayList;
+import java.util.List;
+
+public static void main(String[] args){
+ RestaurantService restService = new RestaurantService();
+Restaurant restaurant = new Restaurant();
+
+LocalTime openingTime = LocalTime.parse("9:30:00");
+        LocalTime closingTime = LocalTime.parse("20:00:00");
+ Restaurant restaurant = restService.addRestaurant("Kings","MG Road",openingTime,closingTime);
+ restaurant.addToMenu("Paneer Manchurian",100);
+ restaurant.addToMenu("Chicken Manchurian",150);
+  restaurant.addToMenu("Mutton Manchurian",200);
+   restaurant.addToMenu("Veg Chowmein",80);
+   restaurant.addToMenu("Chicken Chowmein",80);
+   restaurant.addToMenu("Prawn Chowmein",80);
+   restaurant.addToMenu("Beef Chowmein",80);
+   restaurant.removeFromMenu("Beef Chowmein",80);
+   if (restaurant.isRestaurantOpen == true)
+        restaurant.displayDetails();
+
+ Restaurant restaurant = restService.addRestaurant("Khan Chacha","MG Road",openingTime,closingTime);
+   restaurant.addToMenu("Tundae Kabab",280);
+   restaurant.addToMenu("Haryali Chicken Kabab",200);
+   restaurant.addToMenu("Reshmi Chicken Kabab",220);
+   restaurant.addToMenu("Chicken Sheekh Kabab",190);
+   restaurant.addToMenu("Mutton Sheekh Kabab",260);
+   restaurant.removeFromMenu("Mutton Sheekh Kabab",260);
+  if (restaurant.isRestaurantOpen == true)
+       restaurant.displayDetails();
+
+       restaurant.findItemByName("Chicken Sheekh Kabab");
+
+  Restaurant restaurant = restService.addRestaurant("LA Pinos","MG Road",openingTime,closingTime);
+
+  restaurant.addToMenu("Mushroom Pizza",280);
+     restaurant.addToMenu("Veg Stuffed Garlic Bread",200);
+     restaurant.addToMenu("Paneer Tikka Pizza",220);
+     restaurant.addToMenu("Chichek Sheekh Kabab Pizza",190);
+     restaurant.addToMenu("Mutton Sheekh Kabab Pizza",260);
+     restaurant.addToMenu("Beef Sheekh Kabab Pizza",260);
+     restaurant.removeFromMenu("Beef Sheekh Kabab",260);
+     if (restaurant.isRestaurantOpen == true)
+     restaurant.displayDetails();
+  Restaurant restaurant = restService.addRestaurant("MAC Donald","MG Road",openingTime,closingTime);
+
+
+
+ restaurant = restService.removeRestaurant("Mac Donald","MG Road",openingTime,closingTime);
+
+ //isRestaurantOpen
+
+ //isRestaurantOpen
+
+ restService.findRestaurantByName("kings");
+
+
+}
